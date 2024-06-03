@@ -272,6 +272,12 @@ In an event, this refers to the element that received the event.
 Methods like call(), apply(), and bind() can refer this to any object.
 ```
 
+### <span style="color:red;">ES6</span>
+
+-   arrow function
+-   spread operator ...
+-   modules
+
 ### <span style="color:red;">ES6 arrow function</span>
 
 -   this, this is lexically bound in arrow function
@@ -316,12 +322,6 @@ Lexical Scope
 Lexical Scoping means the variable that are defined outside your scope are automatically available in inner scope, which means you don’t need to pass those to inner scope.
 
 ---
-
-### <span style="color:red;">ES6</span>
-
--   arrow function
--   spread operator ...
--   modules
 
 ### <span style="color:red;">Shallow copy, deep copy, spread operator / 基础类型，复杂数据类型，array 和 object 如何深度复制</span>
 

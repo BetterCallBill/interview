@@ -14,6 +14,9 @@ reference type: heap
 
 ### <span style="color:red;">field vs property</span>
 
+-   field: can't be used on Interface
+-   property: capital
+
 ```c#
 public class MyClass
 {
@@ -42,17 +45,19 @@ public class MyClass
 
 ![Alt text](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*YSWAXo1qsKeZDCSA2OT1kw.png)
 
-field:
+### <span style="color:red;">What are property accessors? / getter and setter</span>
 
--   can't be used on Interface
-
-property:
-
--   capital
+-   idea of encapsulation
+-   add security to fields
 
 ### <span style="color:red;">static vs const</span>
 
-### <span style="color:red;">abstract</span>
+-   const:  
+    is defined at compile time and cannot be changed at runtime. Constants are declared as a field, using the const keyword and must be initialized as they are declared. They are good for things that are truly constant (i.e. pi)
+-   static:
+    means it is a value not related to an instance, and it can be changed at run-time (since it isn't readonly).
+
+### <span style="color:red;">Abstract vs Interface</span>
 
 Data abstraction is the process of hiding certain details and showing only essential information to the user.
 Abstraction can be achieved with either abstract classes or interfaces (which you will learn more about in the next chapter).
@@ -60,18 +65,65 @@ Abstraction can be achieved with either abstract classes or interfaces (which yo
 -   **Abstract class**: is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).
 -   **Abstract method**: can only be used in an abstract class, and it does not have a body. The body is provided by the derived class (inherited from).
 
-### <span style="color:red;">What are property accessors? / getter and setter</span>
+**Key Differences**
 
--   idea of encapsulation
--   add security to fields
+Abstract classes:
 
-### basic data structure in C#
+-   can contain implemented methods
+-   can have constructors
+-   can have fields and properties
+-   Classes can inherit from only one abstract class
+-   typically used for creating a base class for other classes to inherit from
 
--   Dictionary
+Interface:
 
--   Map
+-   only contain method signatures
+-   no constructors
+-   can only have properties
+-   Classes can implement multiple interfaces
+-   used for defining a contract that classes must implement
 
--   unordered map
+**When to use**  
+abstract class: when creating a base class that needs to be inherited by other classes in a class hierarchy.  
+interface: if you need to define a behavior that can be implemented by multiple unrelated classes.
+
+### Basic data structure in C#
+
+-   Array
+-   Dictionary / Map:  
+    used to store key/value pairs
+
+```c#
+// create a dictionary
+Dictionary<string, string> student = new Dictionary<string, string>();
+
+// add items to dictionary
+student.Add("Name", "Susan");
+student.Add("Faculty", "History");
+
+// access the value having key "Name"
+Console.WriteLine(student["Name"]);
+
+// access the value having key "Faculty"
+Console.WriteLine(student["Faculty"]);
+
+// iterate through the car dictionary
+foreach (KeyValuePair<string, string> items in car)
+{
+    Console.WriteLine("{0} : {1}", items.Key, items.Value);
+}
+
+// change
+student["Name"] = "Maruti";
+
+// remove
+student.Remove("Name");
+```
+
+-   Stack
+-   Queue
+-   Hashtable
+-   Linked List
 
 ### What is the difference between "continue" and "break" statements in C#?
 
@@ -96,10 +148,12 @@ Multithreading can improve application performance by performing tasks concurren
 
 ### <span style="color:red;">When we need?</span>
 
--   **Multithreading programming**: 计算密集（compute-intensive，或 CPU-bound）, such like image processing and numerical simulations
--   **Asynchronous programming**: I/O 密集（I/O-intensive，或 I/O-bound）, such as Making web requests, interacting with other services, and other I/O-bound operations like reading from and writing to files or databases
+-   **Multithreading programming**: 计算密集（compute-intensive，或 CPU-bound）, such as image processing and numerical simulations
+-   **Asynchronous programming**: I/O 密集（I/O-intensive，或 I/O-bound）, such as Making web requests, interacting with other services, and other I/O-bound operations as reading from and writing to files or databases
 
 ### <span style="color:red;">How to write?</span>
+
+-   Multithreading
 
 ```c#
 class ThreadTest
@@ -122,6 +176,8 @@ class ThreadTest
   }
 }
 ```
+
+-   Async / Await
 
 ### <span style="color:red;">ThreadPool 线程池</span>
 
@@ -208,39 +264,35 @@ is a design pattern, a technique for achieving 'Inversion of Control' between cl
 -   Singleton: for entire application lifetime  
     store data temporarily, such as cache, in memory collection
 
----
+## EF Core
 
-# DESIGN PATTERN
-
-### 设计模式和框架. 单例，工场，委托，订阅模式的例子
-
-### 软件开发周期，当有新的 feature 的时候是采用的什么流程， 拿到 task 具体怎么拆分，什么思路
-
-### Restful API
+### Fluent API
 
 ---
 
 # SQL
 
-### 关系型数据库和非关系型数据库的区别， 如果使用时写操作多于读操作，应该选用哪个数据库。 sql 的三种事务安全级别。
+### 关系型数据库和非关系型数据库的区别, 如果使用时写操作多于读操作，应该选用哪个数据库。 sql 的三种事务安全级别。
 
 ---
 
 # OAuth 2.0, JWT
 
-### 如果设计一个系统， 前端和后端怎么安排， 在安全方面， 如果使用 jwt， 那么 jwt 会不会有 csrf concern， 如果明文被劫持，你有什么办法解决这个问题吗。
+### 如果设计一个系统, 前端和后端怎么安排, 在安全方面, 如果使用 jwt, 那么 jwt 会不会有 csrf concern, 如果明文被劫持，你有什么办法解决这个问题吗?
 
 ---
 
 # DOCKER
 
-### Docker 的基本概念， docker image， file
+### What is Docker? docker image, file
 
 ---
 
 # TEST
 
 ### How to test
+
+xUnit test
 
 ---
 

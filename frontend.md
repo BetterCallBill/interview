@@ -492,7 +492,10 @@ function App() {
     return (
         <div>
             <H1>Styled Components</H1>
-            <p>Cillum culpa deserunt enim et eiusmod quis proident consequat tempor ipsum sunt esse.</p>
+            <p>
+                Cillum culpa deserunt enim et eiusmod quis proident consequat tempor ipsum sunt
+                esse.
+            </p>
             <DefaultButton>Click ME!</DefaultButton>
         </div>
     );

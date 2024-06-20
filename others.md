@@ -1,24 +1,97 @@
 # Projects
 
-### share your experience about you previous projects? / 你平时的工作主要负责什么？
+### Share your experience about you previous projects? / 你平时的工作主要负责什么？
 
-### what is your most successful project?
+-   angular plugin
+-   property management
 
-### what to do if your project has errors how to avoid it? / Any challenges in project?
+### What is your most successful project?
 
-### how do you start with a project already started and how to deal with other developers' source code?
+-   website
 
-### 什么是 Quality Control?
+### What to do if your project has errors? How to avoid it? / Any challenges in project?
 
-### 什么是 Version Control?
+### How do you start with a project already started and how to deal with other developers' source code?
 
-### OOP 与面向函数编程有哪些区别？
+-   For the entire project:
+    If there is a documentation then that would be a good place to start with. Normally I would start by the design docs, to get a big picture of the project architecture.  
+    Before I read the code, I actually would run it first.
+    If I must read the code, I would like to have someone walk me through it rather than read it by myself coz that would be more efficient.
+-   For specific function:
+    read git commit / pull request
+
+### What is Quality Control?
+
+### What is Version Control?
+
+### OOP vs 面向函数编程
+
+### TDD - Test Driven Development
+
+---
+
+# DESIGN PATTERN
+
+### 设计模式和框架. 单例，工场，委托，订阅模式的例子
+
+### 软件开发周期，当有新的 feature 的时候是采用的什么流程, 拿到 task 具体怎么拆分，什么思路
+
+### Restful API
+
+is an architecture style  
+defines to create HTTP services that receives HTTP request such as GET, POST, PUT, DELETE  
+perform CRUD operations on the application data source  
+returns JSON / XML data as response to client
+
+### Repository pattern
+
+-   pros:
+    loosely-coupled business logic (service) & datas access  
+    changing data store  
+    ez for unit tesing, do not need to mock db context
+
+-   cons:
+
+### Code first VS Db First
+
+-   code: for newer database, smaller application / prototype-level application
+-   db: if you have existing database or DB designed by DBA team, developed separately. Large application / high data-intense application
+
+write tests first before implementation
+
+### SOLID
+
+5 design patterns
+
+reduce dependencies of various classes / modules of the application
+
+S - Single responsibility principle
+
+O - Open-close principle
+
+L -
+
+I - Interface seggregaion principle
+
+D - Dependency Inversion Principle
+
+-   Direct Dependency: higher level modules depend on lower level modules
+-   High-level modules should not import anything from low-level modules. Both should depend on abstractions (e.g., interfaces).
+-   Abstractions should not depend on details. Details (concrete implementations) should depend on abstractions.
+
+### Clean architecture
+
+UI -> Core & Domian <- Infrastructure
+
+### Web API
 
 ---
 
 # Test
 
 如何 troubleshooting?
+
+### XUnit
 
 # Agile
 

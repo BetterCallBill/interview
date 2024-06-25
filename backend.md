@@ -125,14 +125,21 @@ student.Remove("Name");
 -   Hashtable
 -   Linked List
 
-### What is the difference between "continue" and "break" statements in C#?
+### <span style="color:red;">What is the difference between "continue" and "break" statements in C#?</span>
 
 break: you can jump out of a loop \
 continue: you can jump over one iteration and then resume your loop execution
 
-### Filter out the first 3 even numbers from the list using LINQ
+### <span style="color:red;">Filter out the first 3 even numbers from the list using LINQ</span>
 
 var temp = list.where(x => x % 2 == 0).Take(3)
+
+### <span style="color:red;">Func & Action</span>
+
+-   Func - non-void function
+-   Action - return void function
+
+### <span style="color:red;">Delegate</span>
 
 ---
 
@@ -222,38 +229,53 @@ class ThreadSafe
 
 ## Async / await programming
 
-### <span style="color:red;">Func & Action</span>
-
--   Func - non-void function
--   Action - return void function
-
----
-
-### <span style="color:red;">Delegate</span>
-
 ---
 
 ## C# new feature
+
+C# version 7.0:  
+Tuple types (C# reference)
+
+C# version 8:
+
+-   Default interface methods
+-   Nullable reference types
+
+C# version 9:  
+Record Types
+
+C# version 10:
+
+-   Global using directives
+
+C# version 11:
+
+-   Raw string literal
+
+C# version 12:
+
+-   Primary constructors
+-   Collection Literals
 
 ---
 
 # .NET
 
-### Dependency Inversion Principle - D in SOLID
+### <span style="color:red;">Dependency Inversion Principle - D in SOLID</span>
 
 -   Direct Dependency: higher level modules depend on lower level modules
 -   High-level modules should not import anything from low-level modules. Both should depend on abstractions (e.g., interfaces).
 -   Abstractions should not depend on details. Details (concrete implementations) should depend on abstractions.
 
-### Inversion of Control
+### <span style="color:red;">Inversion of Control</span>
 
 is a design principle in which a software component is designed to receive its dependencies from an external source, rather than creating them itself
 
-### Dependency Injection
+### <span style="color:red;">Dependency Injection</span>
 
 is a design pattern, a technique for achieving 'Inversion of Control' between clients and dependencies
 
-### Transient, Scoped, Singleton
+### <span style="color:red;">Transient, Scoped, Singleton</span>
 
 -   Transient: per injection
     short-lived services
@@ -268,17 +290,104 @@ is a design pattern, a technique for achieving 'Inversion of Control' between cl
 
 ### Fluent API
 
+### .Net new features
+
 ---
 
 # SQL
 
-### 关系型数据库和非关系型数据库的区别, 如果使用时写操作多于读操作，应该选用哪个数据库。 sql 的三种事务安全级别。
+### <span style="color:red;">SQL vs NoSQL</span>
+
+The five critical differences between SQL and NoSQL are:
+
+SQL databases are relational  
+NoSQL databases are non-relational
+
+SQL databases use structured query language (SQL) and have a predefined schema  
+NoSQL databases have dynamic schemas for unstructured data
+
+SQL databases are vertically scalable  
+NoSQL databases are horizontally scalable
+
+SQL databases are table-based  
+NoSQL databases are document, key-value, graph, or wide-column stores
+
+SQL databases are better for multi-row transactions  
+NoSQL is better for unstructured data like documents or JSON
+
+SQL:
+
+-   Build an application structured around a relationship between data tables
+-   Ensure your data is consistent across tables
+-   NOT the best choice regarding flexibility or scaling
+
+NoSQL:
+
+-   uses flexible schemas for unstructured data storage
+-   gives you more ability to scale your project as needed & less control over consistency and data relationships
+-   You need high performance, particularly read performance
+-   You need high availability (HA)
+
+在频繁进行数据库操作时，选择合适的数据库是非常重要的。根据实际需求和应用场景，可以考虑以下几种数据库：
+
+关系型数据库（RDBMS）：  
+关系型数据库以表格的形式存储数据，使用 SQL 语言进行操作。常见的关系型数据库包括 MySQL、Oracle、SQL Server 等。优点是数据结构清晰，支持复杂的查询操作，适用于需要事务支持和数据一致性的场景。
+
+非关系型数据库（NoSQL）：  
+非关系型数据库采用键值对、文档、列族等非结构化的方式存储数据，不需要使用 SQL 语言进行操作。常见的非关系型数据库包括 MongoDB、Redis、Cassandra 等。优点是扩展性好，能够处理海量数据和高并发请求，适用于需要灵活性和高性能的场景。
+
+内存数据库（In-Memory Database）：  
+内存数据库将数据存储在内存中，读写速度非常快。常见的内存数据库有 Redis、Memcached 等。优点是响应速度快，适用于对读写性能要求较高的场景，如缓存、会话管理等。
+
+图数据库（Graph Database）：  
+图数据库以图的形式存储数据，适用于处理复杂的关系和网络数据。常见的图数据库有 Neo4j、ArangoDB 等。优点是能够高效地处理复杂的关系查询，适用于社交网络、推荐系统等场景。
+
+在选择数据库时，需要综合考虑以下几个方面：
+
+数据规模：  
+根据数据量的大小选择适合的数据库，关系型数据库适合存储结构化数据，非关系型数据库适合存储半结构化或非结构化数据。
+
+访问模式：  
+根据应用的读写比例选择适合的数据库，如果读操作较多，可以选择内存数据库或缓存数据库；如果写操作较多，可以选择关系型数据库或非关系型数据库。
+
+数据一致性：  
+根据业务需求选择适合的数据库，如果需要强一致性和事务支持，可以选择关系型数据库；如果对一致性要求较低，可以选择非关系型数据库。
+
+扩展性和性能：  
+根据应用的并发量和数据规模选择适合的数据库，非关系型数据库和内存数据库在扩展性和性能方面具有优势。
+
+### <span style="color:red;">SQL 的三种事务安全级别</span>
+
+Transactions (事务)
+
+-   Dirty Read 脏读
+-   NonRepeatable Read 不可重复读
+-   Phantom Read 幻读
+
+Transaction Isolation Levels
+
+-   Read uncommitted 未提交
+-   Read committed 读提交
+-   Repeatable read 可重复读
+-   Serializable 串行化
 
 ---
 
-# OAuth 2.0, JWT
+# OAuth 2.0 & JWT
 
 ### 如果设计一个系统, 前端和后端怎么安排, 在安全方面, 如果使用 jwt, 那么 jwt 会不会有 csrf concern, 如果明文被劫持，你有什么办法解决这个问题吗?
+
+JWT (JSON web token) is a compact and self-contained object for securely transmitting information between parties as a JSON object
+
+Unlike Cookie or Session, JWT/Token has NO csrf concern
+
+所有的 token 都有这个问题啊，有个简单的解决方案就是签发 token 的时候把用户的 ip 也放到 jwt 的 payload 里，每次交易 token 的同时也校验 ip
+
+最極端的情況也只有用戶本人的電腦被人入侵並盜取 Token
+不過這種漏洞不容易發生大規模的危害，頂多就是 1. 2 個用戶會發生，因解析及簽發 JWT 的 Secret 仍在你的 Server 上
+要防範的話可能得紀錄使用者每次登入的 IP，若有差異即通知使用者，由使用者決定是否要加強帳號安全性
+
+![Alt text](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9d4df1ea327940c685be6c8970708a20~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp)
 
 ---
 
@@ -286,19 +395,24 @@ is a design pattern, a technique for achieving 'Inversion of Control' between cl
 
 ### What is Docker? docker image, file
 
+container
+
 ---
 
 # TEST
 
 ### How to test
 
-xUnit test
+Front-end: Jasmine + Karma
+Back-end: xUnit test
 
 ---
 
 # MICROSERVICES
 
 ### pros cons，可能和他们保险业务的结合，聊了一下 message queue，聊了一下 serverless
+
+### message queue
 
 ---
 

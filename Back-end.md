@@ -401,10 +401,15 @@ container
 
 # TEST
 
-### How to test
+### How to test / 你如何做 unit test
 
 Front-end: Jasmine + Karma
 Back-end: xUnit test
+
+
+
+
+
 
 ---
 

@@ -11,7 +11,7 @@ https://www.youtube.com/watch?v=dh406O2v_1c
 5. the browser again sends another HTTP/HTTPS request to the web server
 6. the web server responds with the actual website this time around.
 
-**protocols:**
+**Protocols:**
 
 -   Stateful Protocol: TCP/IP  
     Stateful Protocol require server to save the status and session information.
@@ -47,33 +47,19 @@ For security reasons, browsers restrict cross-origin HTTP requests initiated fro
 
 ![Alt text](https://i.stack.imgur.com/sMNoo.png)
 
-# Projects
+### <span style="color:red;">What is Quality Control?</span>
 
-### Share your experience about you previous projects? / 你平时的工作主要负责什么？
+Quality Control in software development refers to the systematic processes and techniques used to ensure that software products meet predefined quality standards and requirements. It involves activities such as rigorous testing, code reviews, and quality assurance measures to identify and rectify defects early in the development lifecycle. By maintaining high standards of quality throughout the software development process, Quality Control aims to deliver reliable, secure, and user-friendly software solutions that meet customer expectations and adhere to industry best practices.
 
--   angular plugin
--   property management
+### <span style="color:red;">What is Version Control?</span>
 
-### What is your most successful project?
+### <span style="color:red;">OOP vs Functional Programming (FP)</span>
 
--   website
+Object-Oriented Programming (OOP) focuses on modeling software entities as objects with state and behavior, promoting code reusability and modularity through classes and inheritance.
 
-### What to do if your project has errors? How to avoid it? / Any challenges in project?
+Functional Programming (FP) treats computation as the evaluation of mathematical functions, emphasizing immutability, higher-order functions, and function composition for concise and predictable code.
 
-### How do you start with a project already started and how to deal with other developers' source code?
-
--   For the entire project:
-    If there is a documentation then that would be a good place to start with. Normally I would start by the design docs, to get a big picture of the project architecture.  
-    Before I read the code, I actually would run it first.
-    If I must read the code, I would like to have someone walk me through it rather than read it by myself coz that would be more efficient.
--   For specific function:
-    read git commit / pull request
-
-### What is Quality Control?
-
-### What is Version Control?
-
-### OOP vs 面向函数编程
+OOP emphasizes stateful objects and encapsulation, while FP prioritizes immutable data and avoids side effects, making it suitable for parallelism and complex transformations. Both paradigms offer distinct approaches to solving software design and implementation challenges.
 
 ### TDD - Test Driven Development
 
@@ -81,34 +67,57 @@ For security reasons, browsers restrict cross-origin HTTP requests initiated fro
 
 # DESIGN PATTERN
 
-### 设计模式和框架. 单例，工场，委托，订阅模式的例子
+### <span style="color:red;">设计模式和框架. 单例，工场，委托，订阅模式的例子</span>
 
-### 软件开发周期，当有新的 feature 的时候是采用的什么流程, 拿到 task 具体怎么拆分，什么思路
+Singleton Pattern (单例模式):
 
-### Restful API
+Factory Pattern (工厂模式):
+
+Delegate Pattern (委托模式):
+
+Observer Pattern (订阅模式):
+
+### <span style="color:red;">软件开发周期，当有新的 feature 的时候是采用的什么流程, 拿到 task 具体怎么拆分，什么思路</span>
+
+When there's a new feature in the software development cycle, the process typically involves several steps.
+
+First, I review the task to understand its requirements and scope.
+
+Then, I break it down into smaller, manageable tasks or user stories. This helps in planning and estimating the work needed.
+
+Next, I prioritize these tasks based on their importance and dependencies. During implementation, I follow Agile practices like Scrum or Kanban, where tasks are assigned and progress is tracked in sprints. Regular communication with the team ensures alignment and adjustments if needed.
+
+Finally, after coding and testing, the feature is deployed and monitored for any issues or improvements needed.
+
+### <span style="color:red;">Restful API</span>
 
 is an architecture style  
 defines to create HTTP services that receives HTTP request such as GET, POST, PUT, DELETE  
 perform CRUD operations on the application data source  
 returns JSON / XML data as response to client
 
-### Repository pattern
+### <span style="color:red;">Repository pattern</span>
 
--   pros:
-    loosely-coupled business logic (service) & datas access  
-    changing data store  
-    ez for unit tesing, do not need to mock db context
+Pros:
 
--   cons:
+-   loosely-coupled business logic (service) & datas access
+-   changing data store
+-   ez for unit tesing, do not need to mock db context
 
-### Code first VS Db First
+Cons:
+
+-   Increased Complexity: Introducing a repository layer adds complexity to the application, especially in smaller projects where direct data access might suffice.
+-   Performance Overhead: In some cases, the additional layer of abstraction (especially with complex querying or large datasets) can impact performance.
+-   Not Always Necessary: For simple CRUD (Create, Read, Update, Delete) operations, the Repository pattern might introduce unnecessary complexity compared to direct database access.
+
+### <span style="color:red;">Code first VS Db First</span>
 
 -   code: for newer database, smaller application / prototype-level application
 -   db: if you have existing database or DB designed by DBA team, developed separately. Large application / high data-intense application
 
 write tests first before implementation
 
-### SOLID
+### <span style="color:red;">SOLID</span>
 
 5 design patterns
 
@@ -128,67 +137,20 @@ D - Dependency Inversion Principle
 -   High-level modules should not import anything from low-level modules. Both should depend on abstractions (e.g., interfaces).
 -   Abstractions should not depend on details. Details (concrete implementations) should depend on abstractions.
 
-### Clean architecture
+### <span style="color:red;">Clean architecture</span>
 
 UI -> Core & Domian <- Infrastructure
 
-### Web API
+### <span style="color:red;">Web API</span>
 
 ---
 
-# Agile
 
-agile 的理解？agile 的好处坏处？
-
-### 你平时的 agile team 里有哪些人？
-
-### Feature plan / 你未来的职业规划是什么？
-
-### How do you commit your code? / 你平时代码如何 merge 到 master？（git rebase，如何 pick squash， pull request）
-
-一个 agile team 有多少人会比较合适
-你的 team 里有哪些 role
-你如何做 unit test
-你如何做 responsive design
-
-developer 不分前后端有什么好处？
-
-如何 prioritise 工作
-
-你遇到困难怎么办
-遇到解决不了的问题怎么办
-遇到快到 deadline 了，工作没做完怎么办
 
 ---
 
 # Git
 
-### do you have experience in GIT
+### <span style="color:red;">Do you have experience in GIT</span>
 
 ---
-
-# Others
-
-### 你喜欢做前端多一点还是后端多一点？
-
-### 什么是好的代码，什么是不好的代码，自己的看法。
-
-### 一些关于 OOP 的理解，自己在写代码时候会怎么遵守 oop 的原则
-
-### How to deal with conflicts / 怎么处理冲突啊，怎么跟不同 role 的人交流，怎么去 debug
-
-### 你未来的规划是什么？
-
-### 为什么选择我们公司？对于我们公司的产品有什么了解？
-
-### 你未来打算再学一门什么样的语言？
-
-你如何理解 integrity?
-你对我们公司的 culture 有什么了解?
-你认为我们为什么要 hire 你?
-未来 5-10 年的规划
-如何和同事进行合作?
-
-### Any questions ? /
-
-他们公司现在用什么技术栈，什么框架，团队里有多少人，工作模式是什么等

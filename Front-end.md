@@ -1,6 +1,18 @@
 # HTML
 
-### <span style="color:red;">How to increase SEO? semantic html?</span>
+### <span style="color:red;">How to increase SEO?</span>
+
+To increase SEO, I focus on the following steps:
+
+1. **Quality Content**: Create relevant and engaging content with targeted keywords.
+2. **Keywords**: Research and use keywords that users are likely to search for.
+3. **On-Page Optimization**: Optimize titles, meta descriptions, headers, and URLs.
+4. **Mobile-Friendly**: Ensure the website is responsive and loads quickly on mobile devices.
+5. **Backlinks**: Build high-quality backlinks from reputable sites.
+6. **Regular Updates**: Keep content fresh and updated regularly.
+7. **Technical SEO**: Improve site speed, fix broken links, and ensure proper indexing.
+
+By implementing these strategies, I can help improve the site's search engine ranking.
 
 # CSS
 
@@ -9,11 +21,77 @@
 -   sass: scss & sass
 -   sass: indentation
 -   scss: curly braces to nest statements, and newlines instead of semicolons to separate them
--
 
 ### <span style="color:red;">CSS modules - webpack</span>
 
 This approach is designed to fix the problem of the global scope in CSS.
+
+CSS Modules allow you to scope CSS styles to individual components, preventing global namespace pollution. Here’s a simple example using React:
+
+### Step 1: Create a CSS Module
+
+Create a CSS file named `Button.module.css`:
+
+```css
+/* Button.module.css */
+.button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: darkblue;
+}
+```
+
+### Step 2: Create a React Component
+
+Create a React component named `Button.js`:
+
+```javascript
+// Button.js
+import React from 'react';
+import styles from './Button.module.css';
+
+const Button = () => {
+    return <button className={styles.button}>Click Me</button>;
+};
+
+export default Button;
+```
+
+### Step 3: Use the Component
+
+Now, you can use the `Button` component in your application:
+
+```javascript
+// App.js
+import React from 'react';
+import Button from './Button';
+
+const App = () => {
+    return (
+        <div>
+            <h1>My App</h1>
+            <Button />
+        </div>
+    );
+};
+
+export default App;
+```
+
+### Explanation:
+
+-   **Button.module.css**: Contains the CSS styles scoped to the Button component.
+-   **Button.js**: Imports the CSS module and uses the scoped class names to style the button.
+-   **App.js**: Integrates the Button component, which uses the scoped styles.
+
+This way, the styles in `Button.module.css` only apply to the `Button` component, avoiding conflicts with other styles in the application.
 
 ### <span style="color:red;">selector</span>
 

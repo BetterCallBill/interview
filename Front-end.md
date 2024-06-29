@@ -18,8 +18,7 @@ By implementing these strategies, I can help improve the site's search engine ra
 
 ### <span style="color:red;">CSS preprocessor</span>
 
--   sass: scss & sass
--   sass: indentation
+-   sass: scss & sass, indentation
 -   scss: curly braces to nest statements, and newlines instead of semicolons to separate them
 
 ### <span style="color:red;">CSS modules - webpack</span>
@@ -1783,11 +1782,12 @@ A: add condition, or move to shouldComponentUpdate
 ---
 
 现场 debug：
+
 第一题考了 async await。 一个 button 在的 onClick fn 中 this.setState({isloading:xxx}) ，api call 没有 await 在那里，所以整个 function 瞬间执行完了。
 
 第二题是在 useeffect 去 call api 但是没有+ depend array 导致 infinity loop
 
-第三题 是一个 react component 里， 对一个 button 点击会对一个 object 类型的数据进行值的修改，但是没有触发渲染，如何修改。（我的解决办法是深复制一下。）
+第三题是一个 react component 里， 对一个 button 点击会对一个 object 类型的数据进行值的修改，但是没有触发渲染，如何修改。（我的解决办法是深复制一下。）
 
 ---
 
